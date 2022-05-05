@@ -20,7 +20,7 @@ const Contactos = {
     nuevo: async function(contactos){
         const query     = `
             INSERT INTO contactos (nombre, apellido, calle, numero, pais, ciudad)
-            VALUES ('${nombre}', '${apellido}', '${calle}', '${numero}', '${pais}', '${ciudad}')
+            VALUES ('${contactos.nombre}', '${contactos.apellido}', '${contactos.calle}', '${contactos.numero}', '${contactos.pais}', '${contactos.ciudad}')
         `
         const resultado = Mdb.query(query);
         return resultado;
