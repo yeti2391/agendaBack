@@ -26,13 +26,15 @@ const Contactos = {
         return resultado;
     },
     editar: async function(contactos){
-        const query     = `UPDATE contactos SET
-            nombre = '${contactos.nombre}',
-            apellido = '${contactos.apellido}',
-            calle = '${contactos.calle}',
-            numero = '${contactos.numero}',
-            pais = '${contactos.pais}',
-            ciudad = '${contactos.ciudad}'    
+        const query     = `
+            UPDATE contactos SET
+                nombre = '${contactos.nombre}',
+                apellido = '${contactos.apellido}',
+                calle = '${contactos.calle}',
+                numero = '${contactos.numero}',
+                pais = '${contactos.pais}',
+                ciudad = '${contactos.ciudad}'
+            WHERE id = ${contactos.id} 
         `
         const resultado = Mdb.query(query);
         return resultado;

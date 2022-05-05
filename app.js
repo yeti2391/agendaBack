@@ -26,7 +26,7 @@ app.get('/contactos/:id', async (req, res) => {
     //NOTA: la consulta segun explico en linea 11 de contactos.services.js seria: localhost/3001/contacto/1
 })
 
-app.post('/contactos', async(req, res)=>{
+app.post('/contactos', async (req, res)=>{
     const contacto = req.body
     const resultado = await Contactos.nuevo(contacto)
     res.send({
@@ -34,7 +34,7 @@ app.post('/contactos', async(req, res)=>{
     })
 })
 
-app.put('/contactos', async(req, res)=>{
+app.put('/contactos', async (req, res)=>{
     const contacto = req.body
     const resultado = await Contactos.editar(contacto)
     res.send({
